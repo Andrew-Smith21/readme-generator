@@ -1,8 +1,11 @@
 // packages needed for this application
 const inquirer = require('inquirer');
 
-// modular code used 
+// Function to create Readme Markdown
 const generateMarkdown = require('./utils/generateMarkdown');
+
+// Function to write Readme File
+const writeToFile = require('./src/generateFile');
 
 
 // TODO: Create an array of questions for user input
@@ -35,7 +38,7 @@ const questions = [
     },
     {
       type: 'input',
-      name: 'installation-instructions',
+      name: 'installation',
       message: 'Provide instructions on how to install your project (Required)',
       validate: descriptionInput => {
           if (descriptionInput) {
@@ -48,7 +51,7 @@ const questions = [
     },
     {
       type: 'input',
-      name: 'usage-instructions',
+      name: 'usage',
       message: 'Provide instructions on how to use your project (Required)',
       validate: descriptionInput => {
           if (descriptionInput) {
@@ -61,7 +64,7 @@ const questions = [
     },
     {
       type: 'input',
-      name: 'contribution-guidelines',
+      name: 'contribution',
       message: 'Provide guidelines on how to contribute to your project (Required)',
       validate: descriptionInput => {
           if (descriptionInput) {
@@ -74,7 +77,7 @@ const questions = [
     },
     {
       type: 'input',
-      name: 'test-instructions',
+      name: 'test',
       message: 'Provide instructions on how to test your project (Required)',
       validate: descriptionInput => {
           if (descriptionInput) {
@@ -119,18 +122,10 @@ const questions = [
     },
 ]
 
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-
-}
-
-
 // Function to initialize app
 const promptUser = () => {
   return inquirer.prompt(questions);
 }
-
 
 // Function call to initialize app
 promptUser()

@@ -22,16 +22,16 @@ function generateMarkdown(data) {
   ## Table of Contents
 
   ## Installation
-  ${data.installation-instructions}
+  ${data.installation}
 
   ## Usage
-  ${data.usage-instructions}
+  ${data.usage}
 
   ## Contribution
-  ${data.contribution-guidelines}
+  ${data.contribution}
 
   ## Tests
-  ${data.test-instructions}
+  ${data.test}
 
   ## License
 
