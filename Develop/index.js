@@ -92,7 +92,7 @@ const questions = [
       type: 'checkbox',
       name: 'license',
       message: 'Please choose which open source license you would like to use',
-      choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT']
+      choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'None']
     },
     {
       type: 'input',
