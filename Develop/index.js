@@ -134,4 +134,7 @@ promptUser()
   })
   .then(pageMarkdown => {
     return writeToFile(pageMarkdown);
+  })
+  .catch(err => {
+    console.log(err);
   });
